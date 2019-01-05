@@ -1,0 +1,5 @@
+// Must import variables before bootstrap 4
+@import 'custom/variables';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+// Custom styles gets imported after importing bootstrap 
+@import 'custom/styles';
