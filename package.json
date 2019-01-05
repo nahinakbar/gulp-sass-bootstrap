@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Nahin Akbar",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.2.1",
     "font-awesome": "^4.7.0",
