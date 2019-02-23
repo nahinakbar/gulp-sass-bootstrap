@@ -12,13 +12,13 @@
   "author": "Nahin Akbar",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.6"
+    "popper.js": "^1.14.7"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.4",
+    "autoprefixer": "^9.4.8",
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
@@ -26,7 +26,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-scss-lint": "^1.0.0",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sourcemaps": "^2.6.5",
     "merge-stream": "^1.0.1"
   }
 }
