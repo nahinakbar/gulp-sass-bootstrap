@@ -41,6 +41,7 @@ gulp.task('js-import', function () {
 // CSS
 gulp.task('sass', function () {
     return gulp.src(config.paths.src + '/assets/sass/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer({ browsers: [
           'Chrome >= 35',
