@@ -14,12 +14,12 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "popper.js": "^1.14.7"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.8",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-postcss": "^8.0.0",
