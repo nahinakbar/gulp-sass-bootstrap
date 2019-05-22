@@ -30,7 +30,7 @@ gulp.task('fa-import', function () {
 gulp.task('js-import', function () {
   let bootstrapJs = gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js')
     .pipe(gulp.dest(config.paths.src + '/assets/js/vendor/'));
-  let popperJs = gulp.src('node_modules/popper.js/dist/popper.min.js')
+  let popperJs = gulp.src('node_modules/popper.js/dist/umd/popper.min.js')
     .pipe(gulp.dest(config.paths.src + '/assets/js/vendor/'));
   let jQuery = gulp.src('node_modules/jquery/dist/jquery.min.js')
     .pipe(gulp.dest(config.paths.src + '/assets/js/vendor/'));
@@ -53,11 +53,26 @@ gulp.task('sass', function () {
           'Android 2.3',
           'Android >= 4',
           'Opera >= 12']})]))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.paths.src + '/assets/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
+});
+
+gulp.task('sass:build', function () {
+    return gulp.src(config.paths.src + '/assets/sass/main.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([ autoprefixer({ browsers: [
+          'Chrome >= 35',
+          'Firefox >= 38',
+          'Edge >= 12',
+          'Explorer >= 10',
+          'iOS >= 8',
+          'Safari >= 8',
+          'Android 2.3',
+          'Android >= 4',
+          'Opera >= 12']})]))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest(config.paths.src + '/assets/css'));
